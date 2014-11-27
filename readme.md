@@ -1,17 +1,21 @@
 Data Structures & Algorithms
 
-**Sorting Algorithms:** <br>
-1. BubbleSort <br>
-	* Complexity <br>
-	  - Worst   : O(n^2) <br>
-	  - Average : O(n^2) <br>
-	  - Best    : O(n) <br>
-2. InsertionSort <br>
-	* Complexity <br>
-	  - Worst   : O(n^2) <br>
-	  - Average : O(^2) <br>
-	  - Best    : O(n) <br>
-3. SelectionSort <br>
-4. MergeSort <br>
+####Sorting Algorithms
 
+1. BubbleSort
+  * Time Complexity: 
+    - Worst   : O(n^2)
+    - Average : O(n^2)
+    - Best    : O(n)
+2. InsertionSort
+  * Time Complexity:
+    - Worst   : O(n^2)
+    - Average : O(n^2)
+    - Best    : O(n)
+3. SelectionSort
+  * Time Complexity:
+    - Worst   : O(n^2)
+    - Average : O(n^2)
+    - Best    : O(n^2)
+4. MergeSort
 
