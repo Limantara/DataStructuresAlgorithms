@@ -19,3 +19,5 @@ Data Structures & Algorithms
 ####Searching Algorithms
 1. IterativeBinarySearch
   * Time Complexity: O(lg n)
+2. RecursiveBinarySearch
+  * Time Complexity: O(lg n)
