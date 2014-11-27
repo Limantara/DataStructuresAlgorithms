@@ -1,6 +1,6 @@
 Data Structures & Algorithms
 
-**Sorting Algorithms: **
+**Sorting Algorithms:**
 <br>
 
 BubbleSort <br>
