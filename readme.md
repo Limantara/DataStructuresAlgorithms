@@ -1,5 +1,10 @@
 Data Structures & Algorithms
 
+####Data Structures
+1. SinglyLinkedList
+  *  Methods: insert(int), remove(), print()
+  *  Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Traversal:** O(n)
+
 ####Sorting Algorithms
 
 1. BubbleSort
@@ -21,3 +26,4 @@ Data Structures & Algorithms
   * Time Complexity: O(lg n)
 2. RecursiveBinarySearch
   * Time Complexity: O(lg n)
+
