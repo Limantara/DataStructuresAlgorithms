@@ -18,4 +18,5 @@ Data Structures & Algorithms
     - Average : O(n^2)
     - Best    : O(n^2)
 4. MergeSort
-
+  * Time Complexity: O(nlg n)
+  * Space Complexity: O(n)
