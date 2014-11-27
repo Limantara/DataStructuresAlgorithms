@@ -14,3 +14,8 @@ Data Structures & Algorithms
 4. MergeSort
   * Time Complexity: O(nlg n)
   * Space Complexity: O(n)
+
+
+####Searching Algorithms
+1. IterativeBinarySearch
+  * Time Complexity: O(lg n)
