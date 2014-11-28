@@ -66,11 +66,16 @@ class AdjacencyMatrix {
 		undirectedGraph.addEdge(3,0);
 		undirectedGraph.addEdge(3,1);
 		undirectedGraph.addEdge(3,2);
+		undirectedGraph.addVertex();
+		undirectedGraph.addVertex();
 		undirectedGraph.printMatrix();
 
 		undirectedGraph.query(0,3);
 		undirectedGraph.query(2,3);
-
+		undirectedGraph.query(4,5);
+		undirectedGraph.query(4,4);
+		undirectedGraph.query(5,5);
+		
 		System.out.println();
 
 		AdjacencyMatrix directedGraph = new AdjacencyMatrix(true,5);
