@@ -22,6 +22,9 @@ Data Structures & Algorithms
 4. MergeSort
   * Time Complexity: O(nlg n)
   * Space Complexity: O(n)
+5. QuickSort
+  * Time Complexity: **Average:** O(nlg n), **Worst:** O(n^2)
+  * Space Complexity: O(1)
 
 
 ####Searching Algorithms
