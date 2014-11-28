@@ -13,7 +13,7 @@ Data Structures & Algorithms
   * Implementation: AdjacencyMatrix
   * Method: addEdge(int), addVertex(int), query(int, int)
   * Time Complexity: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
-  * Space Complexity: O(|V|^2)
+  * Space Complexity: O( |v|^2 )
 
 ####Sorting Algorithms
 
