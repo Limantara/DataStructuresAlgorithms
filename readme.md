@@ -2,7 +2,7 @@ Data Structures & Algorithms
 
 ####Data Structures
 1. SinglyLinkedList
-  *  Methods: insert(int), remove(), print()
+  *  Methods: getNodeWithKey(int), insert(int), remove(), print()
   *  Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
 2.  LinkedListBinarySearchTree
   * Methods: insert(int), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
