@@ -23,7 +23,7 @@ Data Structures & Algorithms
   * Time Complexity: O(nlg n)
   * Space Complexity: O(n)
 5. QuickSort
-  * Time Complexity: **Average:** O(nlg n), **Worst:** O(n^2)
+  * Time Complexity: **Worst:** O(n^2), **Average:** O(nlg n), **Best:** O(nlg n)
   * Space Complexity: O(1)
 
 
