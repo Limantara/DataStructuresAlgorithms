@@ -9,6 +9,11 @@ Data Structures & Algorithms
   * Implementation: LinkedListBinarySearchTree
   * Methods: getNodeWithKey(int), insert(int), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
   * Time Complexity: **Insertion:** O(lg n), **Search:** O(lg n)
+3. Graph
+  * Implementation: AdjacencyMatrix
+  * Method: addEdge(int), addVertex(int), query(int, int)
+  * Time Complexity: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
+  * Space Complexity: O(|V|^2)
 
 ####Sorting Algorithms
 
