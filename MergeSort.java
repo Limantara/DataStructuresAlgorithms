@@ -1,5 +1,5 @@
 class MergeSort {
-	public static void Merge(int[] arr, int startIndex, int midIndex, int endIndex) {
+	private static void Merge(int[] arr, int startIndex, int midIndex, int endIndex) {
 		int[] tempArr = new int[arr.length];
 
 		for (int index = startIndex; index <= endIndex; index++) {
@@ -27,7 +27,7 @@ class MergeSort {
 			k++;
 		}
 	}
-	public static void MergeSort(int[] arr, int startIndex, int endIndex) {
+	private static void MergeSort(int[] arr, int startIndex, int endIndex) {
 		if (startIndex < endIndex) {
 			int midIndex = (startIndex + endIndex) / 2;
 			MergeSort(arr, startIndex, midIndex);
