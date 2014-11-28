@@ -2,13 +2,14 @@ Data Structures & Algorithms
 
 ####Data Structures
 
-1. SinglyLinkedList
+1. LinkedList
+  * Implementation: SinglyLinkedList
   * Methods: insert(int), remove(), print()
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
 2. BinarySearchTree
   * Implementation: LinkedListBinarySearchTree
   * Methods: getNodeWithKey(int), insert(int), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
-  * Time Complexity: **Insertion:** O(lg n), **Search:** O(lg n)
+  * Time Complexity: **Insertion:** Best: O(lg n) Worst: O(n), **Search:** Best: O(lg n) Worst: O(n)
 3. Graph
   * Implementation: AdjacencyMatrix
   * Method: addEdge(int), addVertex(int), query(int, int)
