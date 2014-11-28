@@ -1,6 +1,29 @@
 public class LinkedListBinarySearchTree {
 	public Node root;
-	
+
+	public Node getNodeWithKey(int key) {
+		if (root == null) {
+			return null;
+		} 
+
+		Node n = root;
+		while (true) {
+			if (key == n.key){
+				return n;
+			}
+			else if (key < n.key) {
+				if (n.leftChild == null) 
+					return null;
+				else 
+					n = n.leftChild;
+			} else if (key > n.key) {
+				if (n.rightChild == null) 
+					return null;
+				else 
+					n = n.rightChild;
+			}
+		}
+	}
 	public void insert(String data, int key) {
 		Node newNode = new Node(data, key);
 
