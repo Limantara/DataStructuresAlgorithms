@@ -13,9 +13,13 @@ Data Structures & Algorithms
 3. Graph
   * Implementation: AdjacencyMatrix
   * Method: addEdge(int), addVertex(int), query(int, int)
-  * Time Complexity: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
-  * Space Complexity: O( |v|^2 )
-
+  * Time Complexity: 
+    -  AdjacencyMatrix: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
+    -  AdjacencyList: **AddEdge:** O(1), **AddVertex:** O(1), **Query** : O(1)
+  * Space Complexity: 
+    -  AdjacencyMatrix: O( |v|^2 )
+    -  AdjacencyList: O( |v| + |e| )
+    
 ####Sorting Algorithms
 
 1. BubbleSort
