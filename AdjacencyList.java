@@ -9,14 +9,16 @@ class AdjacencyList {
 		list = new ArrayList<>();
 	}
 	public void addVertex(int n) {
-		if(!list.contains(n)) {
-			LinkedList<Integer> newVertex = new LinkedList<Integer>();
-			newVertex.add(n);
-			list.add(newVertex);
+		for (LinkedList<Integer> i : list) {
+			if ((int)i.peek() == n) {
+				System.out.println("Error: duplicate value!");
+				return;
+			}
 		}
-		else {
-			System.out.println("Error: duplicate value!");
-		}
+
+		LinkedList<Integer> newVertex = new LinkedList<Integer>();
+		newVertex.add(n);
+		list.add(newVertex);
 	}
 	public void addEdge(int v1, int v2) {
 		if (!list.isEmpty()) {
