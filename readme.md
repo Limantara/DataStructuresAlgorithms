@@ -47,4 +47,7 @@ Data Structures & Algorithms
 1. BinarySearch
   * Implementation: IterativeBinarySearch, RecursiveBinarySearch
   * Time Complexity: O(lg n)
+2. BreadthFirstSearch
+  * Time Complexity: **Worst:** O( |v| + |e| )
+  * Space Complexity: **Worst:** O( |v| )
 
