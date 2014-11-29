@@ -50,4 +50,8 @@ Data Structures & Algorithms
 2. BreadthFirstSearch
   * Time Complexity: **Worst:** O( |v| + |e| )
   * Space Complexity: **Worst:** O( |v| )
+3. DepthFirstSearch
+  * Implementation: Recusive
+  * Time Complexity: **Worst:** O( |v| + |e| )
+  * Space Complexity: **Worst:** O( |v| )
 
