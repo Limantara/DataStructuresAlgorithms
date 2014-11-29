@@ -12,10 +12,10 @@ Data Structures & Algorithms
   * Time Complexity: **Insertion:** Best: O(lg n) Worst: O(n), **Search:** Best: O(lg n) Worst: O(n)
 3. Graph
   * Implementation: AdjacencyMatrix, AdjacencyList
-  * Method: addEdge(int), addVertex(int), query(int, int)
+  * Method: addEdge(int), addVertex(int)
   * Time Complexity: 
-    -  AdjacencyMatrix: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
-    -  AdjacencyList: **AddEdge:** O(1), **AddVertex:** O(1), **Query** : O( |v| )
+    -  AdjacencyMatrix: **AddVertex:** O( |v|^2 ), **AddEdge:** O(1)
+    -  AdjacencyList: **AddVertex:** O(1), **AddEdge:** O(1)
   * Space Complexity: 
     -  AdjacencyMatrix: O( |v|^2 )
     -  AdjacencyList: O( |v| + |e| )
