@@ -11,15 +11,15 @@ Data Structures & Algorithms
   * Methods: getNodeWithKey(int), insert(int), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
   * Time Complexity: **Insertion:** Best: O(lg n) Worst: O(n), **Search:** Best: O(lg n) Worst: O(n)
 3. Graph
-  * Implementation: AdjacencyMatrix
+  * Implementation: AdjacencyMatrix, AdjacencyList
   * Method: addEdge(int), addVertex(int), query(int, int)
   * Time Complexity: 
     -  AdjacencyMatrix: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
-    -  AdjacencyList: **AddEdge:** O(1), **AddVertex:** O(1), **Query** : O(1)
+    -  AdjacencyList: **AddEdge:** O(1), **AddVertex:** O(1), **Query** : O( |v|)
   * Space Complexity: 
     -  AdjacencyMatrix: O( |v|^2 )
     -  AdjacencyList: O( |v| + |e| )
-    
+
 ####Sorting Algorithms
 
 1. BubbleSort
