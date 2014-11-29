@@ -15,7 +15,7 @@ Data Structures & Algorithms
   * Method: addEdge(int), addVertex(int), query(int, int)
   * Time Complexity: 
     -  AdjacencyMatrix: **AddEdge:** O(1), **AddVertex:** O( |v|^2 ), **Query:** O(1)
-    -  AdjacencyList: **AddEdge:** O(1), **AddVertex:** O(1), **Query** : O( |v|)
+    -  AdjacencyList: **AddEdge:** O(1), **AddVertex:** O(1), **Query** : O( |v| )
   * Space Complexity: 
     -  AdjacencyMatrix: O( |v|^2 )
     -  AdjacencyList: O( |v| + |e| )
