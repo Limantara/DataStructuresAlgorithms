@@ -1,99 +1,85 @@
 import java.util.*;
 
 class AdjacencyList {
-	private ArrayList<LinkedList<Integer>> list;
+	private List<LinkedList<Integer>> adjList;
+	private HashMap<Integer,Integer> getIndex;
+	private HashMap<Integer,Integer> getVal;
 	private boolean isDirected;
 
-	public AdjacencyList(boolean isDirected) {
+	public AdjacencyList() {
+		adjList = new ArrayList<LinkedList<Integer>>();
+		getIndex = new HashMap<>();
+		getVal = new HashMap<>();
+		isDirected = false;
+	}
+
+	public void setDirected(boolean isDirected) {
 		this.isDirected = isDirected;
-		list = new ArrayList<>();
 	}
-	public void addVertex(int n) {
-		for (LinkedList<Integer> i : list) {
-			if ((int)i.peek() == n) {
-				System.out.println("Error: duplicate value!");
-				return;
-			}
-		}
 
-		LinkedList<Integer> newVertex = new LinkedList<Integer>();
-		newVertex.add(n);
-		list.add(newVertex);
+	public void addVertex(Integer v) {
+		getIndex.put(v, adjList.size());
+		getVal.put(adjList.size(), v);
+		adjList.add(new LinkedList<Integer>());
 	}
-	public void addEdge(int v1, int v2) {
-		if (!list.isEmpty()) {
-			if (v1 != v2) {
-				for (LinkedList<Integer> i : list) {
-					if (i.peek() == v1) {
-						i.add(v2);
-					}
-				}
-				if (!isDirected) {
-					for (LinkedList<Integer> i : list) {
-						if (i.peek() == v2) {
-							i.add(v1);
-						}
-					}
-				}
-			}
-			else {
-				System.out.println("Error: can't add Edge to itself!");
-			}			
-		}
+
+	public void addEdge(Integer v1, Integer v2) {
+		Integer index1 = getIndex.get(v1);
+		Integer index2 = getIndex.get(v2);
+		adjList.get(index1).add(index2);
+
+		if (!isDirected) 
+			adjList.get(index2).add(index1);
 	}
-	public void query(int v1, int v2) {
-		if (!list.isEmpty()) {
-			for (LinkedList<Integer> i : list) {
-				if (i.peek() == v1) {
-					System.out.print(v1 + " and " + v2);
-					if (i.contains(v2)) 
-						System.out.println(" are connected.");
-					else 
-						System.out.println(" are not connected.");
-				}
-			}
-		}
-	}
-	public void printList() {
-		for (LinkedList<Integer> i : list) {
-			for (Integer k = 0; k < i.size(); k++) {
-				if (k == i.size()-1) 
-					System.out.print(i.get(k));
+
+	public void print() {
+		for (Integer i = 0; i < adjList.size(); i++) {
+			Integer val = getVal.get(i);
+			List<Integer> list = adjList.get(i);
+
+			if (!list.isEmpty()) 
+				System.out.print(val + " --> ");
+			else
+				System.out.println(val);
+
+			for (Integer j : list) {
+				val = getVal.get(j);
+				if (j != list.get(list.size() - 1))
+					System.out.print(val + " --> ");
 				else
-					System.out.print(i.get(k) + " --> ");
+					System.out.println(val);
 			}
-			
-			System.out.println();
 		}
 	}
+
 	public static void main(String[] args) {
-		AdjacencyList undirectedGraph = new AdjacencyList(false);
-		undirectedGraph.addVertex(0);
-		undirectedGraph.addVertex(1);
-		undirectedGraph.addVertex(2);
-		undirectedGraph.addVertex(3);
-		undirectedGraph.addEdge(3,0);
-		undirectedGraph.addEdge(3,1);
-		undirectedGraph.addEdge(3,2);
+		AdjacencyList undirected = new AdjacencyList();
+		undirected.addVertex(22);
+		undirected.addVertex(17);
+		undirected.addVertex(5);
+		undirected.addVertex(3);
+		undirected.addVertex(13);
+
+		undirected.addEdge(22,17);
+		undirected.addEdge(22,13);
+		undirected.addEdge(22,5);
+		undirected.addEdge(5,3);
+		undirected.addEdge(17,13);
+
+		// undirected.print();
+
+		AdjacencyList directed = new AdjacencyList();
+		directed.setDirected(true);
 		
-		undirectedGraph.printList();
+		directed.addVertex(11);
+		directed.addVertex(21);
+		directed.addVertex(67);
+		directed.addVertex(50);
 
-		undirectedGraph.query(0,3);
-		undirectedGraph.query(2,3);
-		
-		System.out.println();
+		directed.addEdge(11,21);
+		directed.addEdge(67,21);
+		directed.addEdge(50,67);
 
-		AdjacencyList directedGraph = new AdjacencyList(true);
-		directedGraph.addVertex(0);
-		directedGraph.addVertex(1);
-		directedGraph.addVertex(2);
-		directedGraph.addEdge(3,0);
-		directedGraph.addEdge(3,1);
-		directedGraph.addEdge(3,2);
-
-		directedGraph.printList();
-
-		directedGraph.query(0,3);
-		directedGraph.query(2,3);
+		directed.print();
 	}
 }
