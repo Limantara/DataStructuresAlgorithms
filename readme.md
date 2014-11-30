@@ -12,13 +12,13 @@ Data Structures & Algorithms
       1. Case 1: `head = null` (empty list)
         * `head = newNode`
         * `tail = head`
-      2. Case 2: (last has node(s))
+      2. Case 2: (list is not empty)
         * set `tail.next` to `newNode`
         * `tail = tail.next`
     2. removeFirst(): 
       1. Case 1: `head = null` (empty list)
         * return
-      2. Case 2: `head != null` (list has node(s))
+      2. Case 2: `head != null` (list is not empty)
         1. Case a: `head = tail` (only one node)
           * set `head` and `tail` to `null`
         2. Case b: (more than one node)
