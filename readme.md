@@ -6,6 +6,18 @@ Data Structures & Algorithms
   * Implementation: SinglyLinkedList
   * Methods: insert(int), removeFirst(), removeLast(), print()
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
+  * Algorithms:
+    1. removeFirst(): 
+      * Case 1: `head = null` (empty list)
+        * return
+
+      * Case 2: `head != null` (list has node(s))
+        * Case a: `head = tail` (only one node)
+          * set `head` and `tail` to `null`
+        * Case b: (more than one node)
+          * `head` = `head.next`
+
+          
 2. BinarySearchTree
   * Implementation: LinkedListBinarySearchTree
   * Methods: getNodeWithKey(int), insert(int), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
