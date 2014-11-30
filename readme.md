@@ -8,7 +8,7 @@ Data Structures & Algorithms
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
   * Algorithms:
     1. insert(int)
-      * `Node newNode` and assign data to it.
+      * Create new node and set its data to the new data to be inserted.
       1. Case 1: `head = null` (empty list)
         * `head = newNode`
         * `tail = head`
