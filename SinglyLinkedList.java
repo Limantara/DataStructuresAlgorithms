@@ -17,15 +17,32 @@ public class SinglyLinkedList {
 			tail = tail.next;
 		}
 	}
-	public void remove() {
-		if (head != null) {
-			Node curr = head;
-
-			while (curr.next.next != null) {
-				curr = curr.next;
+	public void removeFirst() {
+		if(head != null) {
+			if(head == tail) {
+				head = null;
+				tail = null;
+			} else {
+				head = head.next;
 			}
-			curr.next = null;
-			tail = curr;
+		}
+	}
+	public void removeLast() {
+
+		if(head != null) {
+			if(head == tail) {
+				head = null;
+				tail = null;
+			} else {
+				Node curr = head;
+
+				while(curr.next != tail) {
+					curr = curr.next;
+				}
+
+				tail = curr;
+				tail.next = null;
+			}
 		}
 	}
 	public void print() {
@@ -49,17 +66,17 @@ public class SinglyLinkedList {
 		myList.insert(4);
 		myList.print();
 		myList.insert(5);
+		myList.removeLast();
 		myList.print();
-		myList.remove();
+		myList.removeLast();
 		myList.print();
-		myList.remove();
+		myList.removeLast();
 		myList.print();
-		myList.remove();
+		myList.removeLast();
 		myList.print();
-		myList.remove();
+		myList.removeLast();
 		myList.print();
-		myList.remove();
-		myList.print();
+
 	}
 }
 
