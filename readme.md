@@ -7,7 +7,16 @@ Data Structures & Algorithms
   * Methods: insert(int), removeFirst(), removeLast(), print()
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
   * Algorithms:
-    1. removeFirst(): 
+    1. insert(int)
+      * `Node newNode` and assign data to it.
+
+      1. Case 1: `head = null` (empty list)
+        * `head = newNode`
+        * `tail = head`
+      2. Case 2: (last has node(s))
+        * set `tail.next` to `newNode`
+        * `tail = tail.next`
+    2. removeFirst(): 
       1. Case 1: `head = null` (empty list)
         * return
       2. Case 2: `head != null` (list has node(s))
