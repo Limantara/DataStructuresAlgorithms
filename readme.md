@@ -23,7 +23,16 @@ Data Structures & Algorithms
           * set `head` and `tail` to `null`
         2. Case b: (more than one node)
           * `head` = `head.next`
-
+    3. removeLast():
+      1. Case 1: `head = null` (empty list)
+        * return
+      2. Case 2: (list is not empty)
+        1. Case a: `head = tail` (only one node)
+          * set `head` and `tail` to `null` 
+        2. Case b: (more than one node)
+          * create new Node pointer and set it equal to `head`
+          * traverse the list until one node before tail and then set the new pointer to point to this node
+          * set tail equal to this new pointer and tail's next to `null`
 
 2. BinarySearchTree
   * Implementation: LinkedListBinarySearchTree
