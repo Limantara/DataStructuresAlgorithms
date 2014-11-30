@@ -31,7 +31,7 @@ Data Structures & Algorithms
           * set `head` and `tail` to `null` 
         2. Case b: (more than one node)
           * create new Node pointer and set it equal to `head`
-          * traverse the list until one node before tail and then set the new pointer to point to this node
+          * traverse the list with the new pointer until one node before tail
           * set tail equal to this new pointer and tail's next to `null`
 
 2. BinarySearchTree
