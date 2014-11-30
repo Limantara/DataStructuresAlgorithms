@@ -19,7 +19,7 @@ class QuickSort {
 		return pivotIndex;
 	}
 	private static void quickSort(int[] arr, int startIndex, int endIndex) {
-		if (startIndex < endIndex) {
+		if (startIndex <= endIndex) {
 			int pivotIndex = partition(arr, startIndex, endIndex);
 			quickSort(arr, startIndex, pivotIndex - 1);
 			quickSort(arr, pivotIndex + 1, endIndex);
