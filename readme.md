@@ -9,7 +9,6 @@ Data Structures & Algorithms
   * Algorithms:
     1. insert(int)
       * `Node newNode` and assign data to it.
-
       1. Case 1: `head = null` (empty list)
         * `head = newNode`
         * `tail = head`
