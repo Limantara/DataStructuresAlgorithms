@@ -8,12 +8,12 @@ Data Structures & Algorithms
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
   * Algorithms:
     1. removeFirst(): 
-      * Case 1: `head = null` (empty list)
+      1. Case 1: `head = null` (empty list)
         * return
-      * Case 2: `head != null` (list has node(s))
-        * Case a: `head = tail` (only one node)
+      2. Case 2: `head != null` (list has node(s))
+        1. Case a: `head = tail` (only one node)
           * set `head` and `tail` to `null`
-        * Case b: (more than one node)
+        2. Case b: (more than one node)
           * `head` = `head.next`
 
 
