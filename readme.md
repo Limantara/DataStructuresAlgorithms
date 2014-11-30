@@ -4,7 +4,7 @@ Data Structures & Algorithms
 
 1. LinkedList
   * Implementation: SinglyLinkedList
-  * Methods: insert(int), remove(), print()
+  * Methods: insert(int), removeFirst(), removeLast(), print()
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
 2. BinarySearchTree
   * Implementation: LinkedListBinarySearchTree
