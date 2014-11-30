@@ -28,7 +28,7 @@ class MergeSort {
 		}
 	}
 	private static void MergeSort(int[] arr, int startIndex, int endIndex) {
-		if (startIndex < endIndex) {
+		if (startIndex <= endIndex) {
 			int midIndex = (startIndex + endIndex) / 2;
 			MergeSort(arr, startIndex, midIndex);
 			MergeSort(arr, midIndex + 1, endIndex);
