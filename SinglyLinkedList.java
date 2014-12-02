@@ -1,3 +1,13 @@
+class Node {
+	int data;
+	Node next;
+
+	public Node(int data) {
+		this.data = data;
+		next = null;
+	}
+}
+
 public class SinglyLinkedList {
 	public Node head;
 	private Node tail;
@@ -7,13 +17,11 @@ public class SinglyLinkedList {
 		tail = null;
 	}
 	public void insert(int data) {
-		Node newNode = new Node(data);
-
 		if (head == null) {
-			head = newNode;
+			head = new Node(data);
 			tail = head;
 		} else {
-			tail.next = newNode;
+			tail.next = new Node(data);
 			tail = tail.next;
 		}
 	}
@@ -28,7 +36,6 @@ public class SinglyLinkedList {
 		}
 	}
 	public void removeLast() {
-
 		if(head != null) {
 			if(head == tail) {
 				head = null;
@@ -80,12 +87,3 @@ public class SinglyLinkedList {
 	}
 }
 
-class Node {
-	int data;
-	Node next;
-
-	public Node(int data) {
-		this.data = data;
-		next = null;
-	}
-}
