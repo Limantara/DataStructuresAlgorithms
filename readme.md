@@ -50,7 +50,15 @@ Data Structures & Algorithms
       * preOrderFunc(root)
         * Base Case: `if(root == null) return;`
         * Otherwise, 1. Print `root`, 2. call `preOrderFunc(root.left)`, 3. call `preOrderFunc(root.right)`
-   
+    3. postOrderTraversal() - This is a wrapper function that makes a call to a recursive function `postOrderFunc(root)`
+      * postOrderFunc(root)
+        * Base Case: `if(root == null) return;`
+        * Otherwise, 1. call `postOrderFunc(root.left)`, 2. call `postOrderFunc(root.right)`, 3. Print `root`
+    2. inOrderTraversal() - This is a wrapper function that makes a call to a recursive function `inOrderFunc(root)`
+      * inOrderFunc(root)
+        * Base Case: `if(root == null) return;`
+        * Otherwise, 1. call `inOrderFunc(root.left)`, 2. Print `root`, 3. call `inOrderFunc(root.right)`
+
 3. Graph
   * Implementation: AdjacencyMatrix, AdjacencyList
   * Method: addEdge(data), addVertex(data)
