@@ -1,59 +1,52 @@
+class Node {
+	String data;
+	int key;
+	Node leftChild;
+	Node rightChild;
+
+	public Node(String data, int key) {
+		this.data = data;
+		this.key = key;
+		leftChild = null;
+		rightChild = null;
+	}
+
+	public String toString() {
+		return key + " ";
+	}
+}
+
 public class LinkedListBinarySearchTree {
 	public Node root;
 
-	public Node getNodeWithKey(int key) {
-		if (root == null) {
-			return null;
-		} 
-
-		Node n = root;
-		while (true) {
-			if (key == n.key){
-				return n;
-			}
-			else if (key < n.key) {
-				if (n.leftChild == null) 
-					return null;
-				else 
-					n = n.leftChild;
-			} else if (key > n.key) {
-				if (n.rightChild == null) 
-					return null;
-				else 
-					n = n.rightChild;
-			}
-		}
+	public LinkedListBinarySearchTree() {
+		root = null;
 	}
-	public void insert(String data, int key) {
-		Node newNode = new Node(data, key);
 
+	public void insert(String data, int key) {
 		if (root == null) {
-			root = newNode;
+			root = new Node(data, key);
 		}
 		else {
-			Node parent = root;
+			Node focusNode = root;
+			Node parent = null;
 
-			while (true) {
-				if (newNode.key < parent.key) {
-					if (parent.leftChild != null) {
-						parent = parent.leftChild;
-					}
-					else {
-						parent.leftChild = newNode;
-						break;
-					} 
-				} else if (newNode.key > parent.key) {
-					if (parent.rightChild != null) {
-						parent = parent.rightChild;
-					}
-					else {
-						parent.rightChild = newNode;
-						break;
-					} 
-				}
+			while(focusNode != null) {
+				parent = focusNode;
+
+				if(key < focusNode.key) 
+					focusNode = focusNode.leftChild;
+				else if(key > focusNode.key)
+					focusNode = focusNode.rightChild;
 			}
+
+			if(key < parent.key)
+				parent.leftChild = new Node(data,key);
+			else if(key > parent.key)
+				parent.rightChild = new Node(data,key);
 		}
 	}
+
 	private void preOrderFunc(Node root) {
 		if (root != null) {
 			System.out.format("%-4s", root);
@@ -86,9 +79,7 @@ public class LinkedListBinarySearchTree {
 	public void inOrderTraversal() {
 		inOrderFunc(root);
 	}
-	public LinkedListBinarySearchTree() {
-		root = null;
-	}
+
 	public static void main(String[] args) {
 		LinkedListBinarySearchTree myTree = new LinkedListBinarySearchTree();
 		myTree.insert("Five", 5);
@@ -108,19 +99,3 @@ public class LinkedListBinarySearchTree {
 	}
 }
 
-class Node {
-	String data;
-	int key;
-	Node leftChild;
-	Node rightChild;
-
-	public Node(String data, int key) {
-		this.data = data;
-		this.key = key;
-		leftChild = null;
-		rightChild = null;
-	}
-	public String toString() {
-		return key + " ";
-	}
-}
