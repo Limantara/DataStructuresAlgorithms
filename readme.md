@@ -4,29 +4,29 @@ Data Structures & Algorithms
 
 1. LinkedList
   * Implementation: SinglyLinkedList
-  * Methods: insert(int), removeFirst(), removeLast(), print()
+  * Methods: insert(data), removeFirst(), removeLast(), print()
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
   * Algorithms:
-    1. insert(int)
-      1. Case 1: `head = null` (empty list)
+    1. insert(data)
+      1. Case 1: `head == null` (empty list)
         * `head = new Node(data)`
         * `tail = head`
       2. Case 2: (list is not empty)
         * `tail.next = new Node(data)`
         * `tail = tail.next`
     2. removeFirst(): 
-      1. Case 1: `head = null` (empty list)
+      1. Case 1: `head == null` (empty list)
         * return
       2. Case 2: `head != null` (list is not empty)
-        1. Case a: `head = tail` (only one node)
+        1. Case a: `head == tail` (only one node)
           * set `head` and `tail` to `null`
         2. Case b: (more than one node)
           * `head` = `head.next`
     3. removeLast():
-      1. Case 1: `head = null` (empty list)
+      1. Case 1: `head == null` (empty list)
         * return
       2. Case 2: (list is not empty)
-        1. Case a: `head = tail` (only one node)
+        1. Case a: `head == tail` (only one node)
           * set `head` and `tail` to `null` 
         2. Case b: (more than one node)
           * create new Node pointer and set it equal to `head`
@@ -35,11 +35,21 @@ Data Structures & Algorithms
 
 2. BinarySearchTree
   * Implementation: LinkedListBinarySearchTree
-  * Methods: getNodeWithKey(int), insert(int), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
-  * Time Complexity: **Insertion:** Best: O(lg n) Worst: O(n), **Search:** Best: O(lg n) Worst: O(n)
+  * Methods: insert(data), preOrderTraversal(), postOrderTraversal(), inOrderTraversal()
+  * Time Complexity: **Insertion:** Best: O(lg n) Worst: O(n)
+  * Algorithms:
+    1. insert(data,key)
+      1. Case 1: `root == null` (empty tree)
+        * `root = new Node(data,key)`
+      2. Case 2: (tree is not empty)
+        * Create a Node pointer `focusNode`, set it equal to `head`
+        * Create another Node pointer `painter`, set it equal to `null`
+        * `while(focusNode != null)` : traverse the list such that if the new Node's key is less than `focusNode`'s key, go to the left child, but if the new Node's key is greater than `focusNode`'s key, go to the right child. Assume no duplicate keys are allowed
+        * At the end of the loop, `focusNode` is equal to `null` and `parent` is pointing to the parent of the new Node we want to insert. Then, insert the new Node to the left of `parent` if its key is less than `parent`'s key or to the right of `parent` if its key is greater than `parent`'s key
+
 3. Graph
   * Implementation: AdjacencyMatrix, AdjacencyList
-  * Method: addEdge(int), addVertex(int)
+  * Method: addEdge(data), addVertex(data)
   * Time Complexity: 
     -  AdjacencyMatrix: **AddVertex:** O( |v|^2 ), **AddEdge:** O(1)
     -  AdjacencyList: **AddVertex:** O(1), **AddEdge:** O(1)
