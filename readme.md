@@ -8,12 +8,11 @@ Data Structures & Algorithms
   * Time Complexity: **Insertion:** O(1), **Removal:** O(1), **Search:** O(n)
   * Algorithms:
     1. insert(int)
-      * Create new node and set its data to the new data to be inserted.
       1. Case 1: `head = null` (empty list)
-        * `head = newNode`
+        * `head = new Node(data)`
         * `tail = head`
       2. Case 2: (list is not empty)
-        * set `tail.next` to `newNode`
+        * `tail.next = new Node(data)`
         * `tail = tail.next`
     2. removeFirst(): 
       1. Case 1: `head = null` (empty list)
@@ -31,7 +30,7 @@ Data Structures & Algorithms
           * set `head` and `tail` to `null` 
         2. Case b: (more than one node)
           * create new Node pointer and set it equal to `head`
-          * traverse the list, with the new pointer, until one node before tail
+          * traverse the list with the new pointer until one node before tail
           * set tail equal to this new pointer and tail's next to `null`
 
 2. BinarySearchTree
