@@ -43,9 +43,9 @@ Data Structures & Algorithms
         * `root = new Node(data,key)`
       2. Case 2: (tree is not empty)
         * Create a Node pointer `focusNode`, set it equal to `head`
-        * Create another Node pointer `painter`, set it equal to `null`
+        * Create another Node pointer `parent`, set it equal to `null`
         * `while(focusNode != null)` : traverse the list such that if the new Node's key is less than `focusNode`'s key, go to the left child, but if the new Node's key is greater than `focusNode`'s key, go to the right child. Assume no duplicate keys are allowed
-        * At the end of the loop, `focusNode` is equal to `null` and `parent` is pointing to the parent of the new Node we want to insert. Then, insert the new Node to the left of `parent` if its key is less than `parent`'s key or to the right of `parent` if its key is greater than `parent`'s key
+        * At the end of the loop, `focusNode` is pointing to `null`, and `parent` is pointing to the Node that soon will become the parent of the new Node. Then, insert the new Node to the left of `parent` if its key is less than `parent`'s key or to the right of `parent` if its key is greater than `parent`'s key
 
 3. Graph
   * Implementation: AdjacencyMatrix, AdjacencyList
