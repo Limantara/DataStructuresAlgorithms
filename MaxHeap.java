@@ -31,7 +31,7 @@ class MaxHeap {
 	void heapify(int[] arr, int i) {
 		if(left_child_index(i) <= last_index && arr[i] > arr[left_child_index(i)]) {
 			largest_element_index = i;
-		} else if(left_child_index(i) <= last_index && arr[left_child_index(i)] > arr[largest_element_index]) {
+		} else if(left_child_index(i) <= last_index && arr[left_child_index(i)] > arr[i]) {
 			largest_element_index = left_child_index(i);
 		}
 
