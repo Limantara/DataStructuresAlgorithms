@@ -69,6 +69,12 @@ Data Structures & Algorithms
     -  AdjacencyMatrix: O( |v|^2 )
     -  AdjacencyList: O( |v| + |e| )
 
+4. Heap
+  * Implementation: MaxHeap
+  * Method: build(array), heapify(arr,i)
+  * Time Complexity:
+    - **Heapify:** O(lg n), **Build:** O(n)
+
 ####Sorting Algorithms
 
 1. BubbleSort
