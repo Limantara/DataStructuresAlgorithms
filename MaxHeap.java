@@ -16,9 +16,9 @@ class MaxHeap {
 	}
 
 	void build(int[] arr) {
-		array = arr;
 		last_index = arr.length - 1;
-		build_max_heap(array);
+		build_max_heap(arr);
+		array = arr;
 	}
 
 	void build_max_heap(int[] arr) {
@@ -29,26 +29,26 @@ class MaxHeap {
 	}
 
 	void heapify(int[] arr, int i) {
-		if(left_child_index(i) <= last_index && array[i] > array[left_child_index(i)]) {
+		if(left_child_index(i) <= last_index && arr[i] > arr[left_child_index(i)]) {
 			largest_element_index = i;
-		} else if(left_child_index(i) <= last_index && array[left_child_index(i)] > array[largest_element_index]) {
+		} else if(left_child_index(i) <= last_index && arr[left_child_index(i)] > arr[largest_element_index]) {
 			largest_element_index = left_child_index(i);
 		}
 
-		if(right_child_index(i) <= last_index && array[right_child_index(i)] > array[largest_element_index]) {
+		if(right_child_index(i) <= last_index && arr[right_child_index(i)] > arr[largest_element_index]) {
 			largest_element_index = right_child_index(i);
 		}
 
 		if(largest_element_index != i) {
-			exchange_elements_of(largest_element_index,i);
-			heapify(array,largest_element_index);
+			exchange_elements_of(arr,largest_element_index,i);
+			heapify(arr,largest_element_index);
 		}
 	}
 
-	void exchange_elements_of(int largest_element_index, int i) {
-		int temp = array[largest_element_index];
-		array[largest_element_index] = array[i];
-		array[i] = temp;
+	void exchange_elements_of(int[] arr, int largest_element_index, int i) {
+		int temp = arr[largest_element_index];
+		arr[largest_element_index] = arr[i];
+		arr[i] = temp;
 	}
 
 	int max() {
