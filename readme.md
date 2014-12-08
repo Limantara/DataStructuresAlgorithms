@@ -73,7 +73,7 @@ Data Structures & Algorithms
   * Implementation: MaxHeap
   * Method: build(array), heapify(arr,i)
   * Time Complexity:
-    - **Heapify:** O(lg n), **Build:** O(n)
+    - **Heapify:** O(n), **Build:** O(n)
 
 ####Sorting Algorithms
 
@@ -94,6 +94,9 @@ Data Structures & Algorithms
   * Space Complexity: O(n)
 5. QuickSort
   * Time Complexity: **Worst:** O(n^2), **Average:** O(nlg n), **Best:** O(nlg n)
+  * Space Complexity: O(1)
+6. HeapSort
+  * Time Complexity: O(nlg n)
   * Space Complexity: O(1)
 
 
