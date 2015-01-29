@@ -1,22 +1,22 @@
-class Node {
-	int data;
-	Node next;
+class Node<T> {
+	T data;
+	Node<T> next;
 
-	public Node(int data) {
+	public Node(T data) {
 		this.data = data;
 		next = null;
 	}
 }
 
-public class SinglyLinkedList {
-	public Node head;
-	private Node tail;
+public class SinglyLinkedList<T> {
+	public Node<T> head;
+	private Node<T> tail;
 
 	public SinglyLinkedList() {
 		head = null;
 		tail = null;
 	}
-	public void insert(int data) {
+	public void insert(T data) {
 		if (head == null) {
 			head = new Node(data);
 			tail = head;
@@ -41,7 +41,7 @@ public class SinglyLinkedList {
 				head = null;
 				tail = null;
 			} else {
-				Node curr = head;
+				Node<T> curr = head;
 
 				while(curr.next != tail) {
 					curr = curr.next;
@@ -53,7 +53,7 @@ public class SinglyLinkedList {
 		}
 	}
 	public void print() {
-		Node curr = head;
+		Node<T> curr = head;
 
 		while (curr != null) {
 			System.out.print(curr.data + " ");
@@ -63,7 +63,7 @@ public class SinglyLinkedList {
 		System.out.println();
 	}
 	public static void main(String[] args) {
-		SinglyLinkedList myList = new SinglyLinkedList();
+		SinglyLinkedList<Integer> myList = new SinglyLinkedList();
 		myList.insert(1);
 		myList.print();
 		myList.insert(2);
